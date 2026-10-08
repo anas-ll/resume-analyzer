@@ -1,6 +1,5 @@
 import type { FieldError, UseFormRegisterReturn } from 'react-hook-form';
-import { MAX_JOB_DESCRIPTION_CHARS } from '../utils/constants';
-
+import { MAX_JOB_DESCRIPTION_CHARS } from './constants';
 interface JobDescriptionFieldProps {
   registration: UseFormRegisterReturn;
   error?: FieldError;
