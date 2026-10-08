@@ -1,14 +1,12 @@
-import { useEffect, useRef, useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { Sparkles } from 'lucide-react';
-import FileDropzone from '../components/FileDropzone';
-import JobDescriptionField from '../components/JobDescriptionField';
-import LoadingPanel from '../components/LoadingPanel';
-import ErrorAlert from '../components/ErrorAlert';
-import ResultsDashboard from '../components/ResultsDashboard';
-import { useAnalyzer } from '../hooks/useAnalyzer';
-import { MAX_JOB_DESCRIPTION_CHARS, MIN_JOB_DESCRIPTION_CHARS } from '../utils/constants';
-import type { AnalyzeFormValues, UploadState } from '../types';
+import FileDropzone from './FileDropzone';
+import JobDescriptionField from './JobDescriptionField';
+import LoadingPanel from './LoadingPanel';
+import ErrorAlert from './ErrorAlert';
+import ResultsDashboard from './ResultsDashboard';
+
+import { useAnalyzer } from './useAnalyzer';
+import { MAX_JOB_DESCRIPTION_CHARS, MIN_JOB_DESCRIPTION_CHARS } from './constants';
+import type { AnalyzeFormValues, UploadState } from './types';
 
 export default function AnalyzerPage() {
   const { status, result, error, analyze, dismissError, reset, isLoading } = useAnalyzer();
