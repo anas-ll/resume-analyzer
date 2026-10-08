@@ -8,6 +8,14 @@ Upload a resume (PDF), paste a job description, and get an AI-generated ATS anal
 
 > Replace the placeholders in `docs/screenshots/` with your own screenshots.
 
+## Netlify frontend deployment
+
+This repository contains the frontend at the repository root: `main.tsx`, `App.tsx`, `components/`, and `pages/`. The HTML entry point, TypeScript configuration, and Tailwind content paths use this layout rather than requiring a `src/` directory.
+
+Use `npm run build` as the Netlify build command and `dist` as the publish directory, with no base directory. The `public/_redirects` file allows direct navigation to frontend routes such as `/analyze`.
+
+The analysis backend is not included in this repository. Configure `VITE_API_URL` in Netlify with the address of an existing backend that implements `POST /api/analyze`, then redeploy. Without it, the frontend displays an unavailable-service message and disables analysis submissions.
+
 ## Features
 
 - Drag-and-drop PDF upload with client and server validation
