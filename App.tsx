@@ -1,9 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import HomePage from './pages/HomePage';
-import AnalyzerPage from './pages/AnalyzerPage';
-import NotFoundPage from './pages/NotFoundPage';
+import Navbar from './Navbar';
+import Footer from './Footer';
+
+import HomePage from './HomePage';
+import AnalyzerPage from './AnalyzerPage';
+import NotFoundPage from './NotFoundPage';
 
 export default function App() {
   return (
