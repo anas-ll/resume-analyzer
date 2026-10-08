@@ -1,0 +1,4 @@
+export const MAX_FILE_SIZE_MB = 5;
+export const MAX_FILE_SIZE_BYTES = MAX_FILE_SIZE_MB * 1024 * 1024;
+export const MIN_JOB_DESCRIPTION_CHARS = 50;
+export const MAX_JOB_DESCRIPTION_CHARS = 8000;
