@@ -1,10 +1,10 @@
 import { useCallback, useRef, useState } from 'react';
 import type { DragEvent, KeyboardEvent } from 'react';
 import { FileText, UploadCloud, X } from 'lucide-react';
-import { formatFileSize, validateResumeFile } from '../utils/validation';
-import { MAX_FILE_SIZE_MB } from '../utils/constants';
-import type { UploadState } from '../types';
-
+import { formatFileSize, validateResumeFile } from './validation';
+import { MAX_FILE_SIZE_MB } from './constants';
+import type { UploadState } from './types';
+``
 interface FileDropzoneProps {
   value: UploadState;
   onChange: (state: UploadState) => void;
