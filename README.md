@@ -169,6 +169,20 @@ Other scripts: `npm run build`, `npm run preview`, `npm run typecheck` (frontend
 
 ## Deployment
 
+### Frontend on Netlify
+
+The frontend files in this repository are at the repository root. Leave the
+base directory empty, use `npm run build` as the build command, and publish
+`dist`. The root `index.html` loads `main.tsx`, and `public/_redirects` supports
+direct navigation to client-side routes such as `/analyze`.
+
+Set `VITE_API_URL` to the separately deployed backend's base URL and include the
+Netlify site's origin in the backend's `CORS_ORIGINS` setting. Rebuild the
+frontend after changing `VITE_API_URL`. Without a configured backend URL, the
+production frontend displays an availability notice and disables analysis
+submission instead of sending requests to localhost. Local development uses
+`http://localhost:5000` when `VITE_API_URL` is not set.
+
 ### Backend on Render
 
 1. Push the repo to GitHub.
