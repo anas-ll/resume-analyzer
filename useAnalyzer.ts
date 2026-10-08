@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react';
-import { AnalyzeError, analyzeResume } from '../services/api';
-import { toATSResult } from '../utils/result';
-import type { AnalyzerStatus, ATSResult, ErrorState } from '../types';
+import { AnalyzeError, analyzeResume } from './api';
+import { toATSResult } from './result';
+import type { AnalyzerStatus, ATSResult, ErrorState } from './types';
 
 export function useAnalyzer() {
   const [status, setStatus] = useState<AnalyzerStatus>('idle');
